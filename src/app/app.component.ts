@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 interface Alert {
   type: string;
@@ -41,6 +42,7 @@ const ALERTS: Alert[] = [{
 export class AppComponent {
   title = 'angular-template';
 
+  model: NgbDateStruct;
 
   alerts: Alert[];
 
