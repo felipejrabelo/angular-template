@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { FormsModule } from '@angular/forms';
 import { TemplatePageComponent } from './template-page/template-page.component';
+import { PrototipoPageComponent } from './prototipo-page/prototipo-page.component';
 
 registerLocaleData(localePt);
 
@@ -17,7 +18,8 @@ registerLocaleData(localePt);
   declarations: [
     AppComponent,
     NavBarComponent,
-    TemplatePageComponent
+    TemplatePageComponent,
+    PrototipoPageComponent
   ],
   imports: [
     BrowserModule,
