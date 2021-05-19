@@ -9,13 +9,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { FormsModule } from '@angular/forms';
+import { TemplatePageComponent } from './template-page/template-page.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    TemplatePageComponent
   ],
   imports: [
     BrowserModule,
