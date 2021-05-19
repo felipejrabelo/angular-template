@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateAdapter, NgbDateParserFormatter, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import { CustomAdapter } from './shared/datePickerCustomAdapter.service';
+import { CustomDateParserFormatter } from './shared/datePickerCustomDateParserFormatter.service';
 
 interface Alert {
   type: string;
@@ -37,7 +39,11 @@ const ALERTS: Alert[] = [{
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [
+    { provide: NgbDateAdapter, useClass: CustomAdapter },
+    { provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter }
+  ]
 })
 export class AppComponent {
   title = 'angular-template';
